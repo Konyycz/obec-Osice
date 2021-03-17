@@ -118,9 +118,18 @@ h2 {
     display: none!important;
 }
 
+.menu-pc:hover {
+    z-index: 20;
+}
+
 .main-menu {
     order: 2;
     position: relative;
+}
+
+.main-menu-active {
+    order: 1!important;
+    z-index: 1000;
 }
 
 .menu-header {
@@ -128,10 +137,6 @@ h2 {
     background-color: #3e3e3e;
     padding: 12px 0 12px 30px;
     box-sizing: border-box;
-}
-
-.main-menu-active {
-    order: 1!important;
 }
 
 .main-menu-active > .menu-header {
@@ -146,10 +151,12 @@ h2 {
 }
 
 .menu-body {
-    width: calc(100% - 16px);
+    width: calc(100% - 18px);
     background-color: white;
     height: 0;
     overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top: 0;
 }
 
 .main-menu:nth-child(3) > .menu-header, .main-menu:nth-child(3) > .menu-body {
