@@ -13,7 +13,20 @@
 <body>
   <div id="header"></div>
   <div id="menu"></div>
-<div style="height: 500px; width: 100%; position: relative; z-index: 1;"></div>
+
+
+  <div class="container">
+    <div class="page-body col-12 col-lg-8">
+      <!--- tady piš --->
+      
+
+
+
+
+    </div>
+  </div>
+
+  
   <div id="footer"></div>
 </body>
 
@@ -21,9 +34,15 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-<script>
-$("#header").load("./html/header.html");
-$("#menu").load("./html/menu.html");
-$("#footer").load("./html/footer.html");
-</script>
+  <script>
+    $("#header").load("./html/header.html");
+    $("#menu").load("./html/menu.html",null,loadClasses());
+    $("#footer").load("./html/footer.html");
+    
+    function loadClasses() {
+        setTimeout(() => {
+          $(".menu-urad").addClass('main-menu-active');
+        }, 150);
+    }
+    </script>
 </html>

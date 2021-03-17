@@ -26,6 +26,7 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 .col-1{flex:0 0 auto;width:8.3333333333%}
@@ -44,6 +45,27 @@ body {
 
 .text-white {
     color: white;
+}
+
+.page-body {
+    margin-left: auto;
+    margin-top: 30px;
+    position: relative;
+    z-index: 7;
+}
+
+.karta {
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.karta-odkaz {
+    color: #3e3e3e;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 30px 0;
+    display: block;
 }
 
 /* HEADER */ 
@@ -87,23 +109,33 @@ h2 {
 }
 
 /* MENU */
-
-.menu {
+.menu-pc {
     justify-content: space-between;
-    position: relative;
-    z-index: 8;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
     margin-top: -57px;
-    align-items: stretch;
+    display: none!important;
 }
 
 .main-menu {
-    width: calc(32.5%);
-    background-color: white;
+    order: 2;
+    position: relative;
 }
 
 .menu-header {
+    width: calc(100% - 16px);
     background-color: #3e3e3e;
-    padding: 12px 0 12px 30px;   
+    padding: 12px 0 12px 30px;
+    box-sizing: border-box;
+}
+
+.main-menu-active {
+    order: 1!important;
+}
+
+.main-menu-active > .menu-header {
+    background-color: #00AEEF;
 }
 
 .menu-nadpis {
@@ -114,8 +146,19 @@ h2 {
 }
 
 .menu-body {
+    width: calc(100% - 16px);
     background-color: white;
+    height: 0;
+    overflow: hidden;
+}
+
+.main-menu:nth-child(3) > .menu-header, .main-menu:nth-child(3) > .menu-body {
+    width: 100%;
+}
+
+.menu-body-open > .menu-body, .main-menu:hover > .menu-body, .main-menu-active > .menu-body {
     padding: 15px 0;
+    height: 210px;
 }
 
 .menu-body-odkaz {
@@ -124,6 +167,21 @@ h2 {
     padding: 5px 0 5px 30px;
     font-size: 16px;
     font-weight: 600;
+    width: 100%;
+}
+
+.menu-body-odkaz:hover {
+    color: #FFD025;
+}
+
+.menu-body-odkaz-active {
+    color: #00AEEF;
+}
+
+@media (min-width: 992px) {
+    .menu-pc {
+        display: flex!important;
+    }
 }
 
 /* footer */ 
@@ -297,6 +355,77 @@ footer {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Užitečné informace */
+
+.informace {
+    margin-bottom: 300px;
+}
+
+.sekce-nadpis {
+    color: #9b9b9b;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.informace-nadpis {
+    font-size: 30px;
+    color: #3e3e3e;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.uzitecne-informace-karta {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.uzitecne-informace-karta-2 {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* Úřední deska */
+
+.uredni-deska-karta {
+    margin: 10px 0;
+    padding: 40px 50px;
+}
+
+.uredni-deska-nadpis {
+    color: #3e3e3e;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.karta-ke-stazeni {
+    margin-bottom: -60px;
+}
+
+.uredni-deska-kestazeni {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.uredni-deska-text {
+    color: #676767;
+    font-weight: 600;
+}
+
+.uredni-deska-zprava {
+    align-items: flex-end;
+}
+
+.uredni-deska-nadpis-spodni {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #9b9b9b;
+    font-weight: 600;
+    font-size: 28px;
+    padding: 20px;
+}
+
 /*------------------------------------
 MEDIA
 ------------------------------------*/
@@ -349,6 +478,18 @@ MEDIA
     .col-md-10{flex:0 0 auto;width:83.3333333333%}
     .col-md-11{flex:0 0 auto;width:91.6666666667%}
     .col-md-12{flex:0 0 auto;width:100%}
+    .uzitecne-informace-karta {
+        width: calc(100% - 8px);
+        margin-right: 8px;
+    }
+    
+    .uzitecne-informace-karta-2 {
+        width: calc(100% - 8px);
+        margin-left: 8px;
+    }
+    .informace-nadpis {
+        font-size: 40px;
+    }
 }
 @media (min-width: 992px) {
     h1 {

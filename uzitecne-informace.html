@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+<body>
+  <div id="header"></div>
+  <div id="menu"></div>
+
+
+  <div class="container">
+    <div class="page-body col-12 col-lg-8">
+      <h6 class="sekce-nadpis">Osice > Obecní úřad > Užitečné informace</h6>
+      <div class="informace">
+        <h3 class="informace-nadpis">Užitečné informace</h3>
+          <div class="display-flex-row">
+            
+            <div class="col-12 col-md-6">
+              <div class="karta uzitecne-informace-karta">
+                <a class="karta-odkaz" href="">Čísla tísňových volání</a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="karta uzitecne-informace-karta-2">
+                <a class="karta-odkaz" href="">Zdravotnické zařízení</a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="karta uzitecne-informace-karta">
+                <a class="karta-odkaz" href="">Jízdní řády</a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="karta uzitecne-informace-karta-2">
+                <a class="karta-odkaz" href="">Jak třídit odpad</a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="karta uzitecne-informace-karta">
+                <a class="karta-odkaz" href="">Řešení životních situací</a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="footer"></div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#header").load("./html/header.html");
+    $("#menu").load("./html/menu.html",null,loadClasses());
+    $("#footer").load("./html/footer.html");
+    
+    function loadClasses() {
+        setTimeout(() => {
+          $(".menu-urad").addClass('main-menu-active');
+        }, 150);
+    }
+    </script>
+</html>

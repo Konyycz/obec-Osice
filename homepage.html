@@ -87,7 +87,15 @@
   crossorigin="anonymous"></script>
 <script>
 $("#header").load("./html/header.html");
-$("#menu").load("./html/menu.html");
+$("#menu").load("./html/menu.html",null,loadClasses());
 $("#footer").load("./html/footer.html");
+
+function loadClasses() {
+    setTimeout(() => {
+        $(".menu-obec").addClass('menu-body-open');
+        $(".menu-urad").addClass('menu-body-open');
+        $(".menu-cas").addClass('menu-body-open');
+    }, 150);
+}
 </script>
 </html>
