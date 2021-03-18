@@ -49,7 +49,7 @@ body {
 
 .page-body {
     margin-left: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     position: relative;
     z-index: 7;
 }
@@ -58,6 +58,21 @@ body {
     background-color: white;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.karta-zluty-bok {
+    position: relative;
+    padding: 20px 20px 20px 40px;
+}
+
+.karta-zluty-bok::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 20px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #FFF200 ,#FFD025);
 }
 
 .karta-odkaz {
@@ -109,6 +124,76 @@ h2 {
 }
 
 /* MENU */
+.menu-mobile {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.menu-img {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.menu-img > img {
+    height: 24px;
+    margin-left: 10px;
+}
+
+.menu-mobile-body {
+    position: absolute;
+    top: 100%;
+    width: 248px;
+    right: -350px;
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.menu-mobile:hover .menu-mobile-body {
+    right: 0px;
+}
+
+.menu-mobile-body-inner {
+    width: 100%;
+    height: 41px;
+    overflow: hidden;
+}
+
+.menu-mobile-nadpis {
+    background-color: #3e3e3e;
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 600;
+}
+
+.menu-mobile-body-inner:hover {
+    height: 251px;
+}
+
+.menu-mobile-body-inner:hover .menu-mobile-nadpis {
+    background-color: #00AEEF;
+}
+
+.menu-mobile-odkaz {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
 .menu-pc {
     justify-content: space-between;
     position: absolute;
@@ -177,7 +262,7 @@ h2 {
     width: 100%;
 }
 
-.menu-body-odkaz:hover {
+.menu-body-odkaz:hover, .menu-mobile-odkaz:hover {
     color: #FFD025;
 }
 
@@ -370,15 +455,15 @@ footer {
 
 .sekce-nadpis {
     color: #9b9b9b;
-    font-size: 20px;
+    font-size: 17px;
     margin-bottom: 20px;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 .informace-nadpis {
     font-size: 30px;
     color: #3e3e3e;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-bottom: 20px;
     font-weight: 800;
 }
@@ -402,22 +487,23 @@ footer {
 
 .uredni-deska-nadpis {
     color: #3e3e3e;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
 }
 
 .karta-ke-stazeni {
-    margin-bottom: -60px;
+    margin-bottom: -50px;
 }
 
 .uredni-deska-kestazeni {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 800;
 }
 
 .uredni-deska-text {
     color: #676767;
     font-weight: 600;
+    font-size: 13px;
 }
 
 .uredni-deska-zprava {
@@ -518,8 +604,8 @@ MEDIA
     .col-lg-11{flex:0 0 auto;width:91.6666666667%}
     .col-lg-12{flex:0 0 auto;width:100%}
     /* HOMEPAGE */
-    #menu {
-        margin-bottom: 250px;
+    .menu-mobile {
+        display: none;
     }
     .homepage-body {
         width: calc(100% - 8px);
