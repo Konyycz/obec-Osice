@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+  <div id="header"></div>
+  <div id="menu"></div>
+
+
+  <div class="container">
+    <div class="page-body col-12 col-lg-8">
+      <!--- tady piš --->
+      
+      <div class="container">
+        <div class="more-info-blue">
+            <h2 class="contact-form-heading">Pošlete nám zprávu</h2>
+            <div class="Form">
+                <div class="Form-50">
+                    <label for="name">Jméno:</label>
+                    <input id="name" type="text"/>
+                </div>
+                <div class="Form-50">
+                    <label for="contact">Kontakt:</label>
+                    <input id="contact" type="text"/>
+                </div>
+                <div class="Form-100">
+                    <label for="message">Zpráva:</label>
+                    <textarea id="message" rows="10"></textarea>
+                </div>
+            </div>
+
+            <button class="big-transparent-button" style="padding: 20px 80px!important;">Odeslat zprávu</button>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="formular">
+         <h2 class="formular-nadpis">Elektronická podatelna / Napište nám</h2>
+          <div class="form">
+
+            <div class="form-50 col-12 col-md-6">
+              <label for="name">Jméno:</label>
+              <input type="name" type="text"/>
+            </div>
+
+            <div class="form-50 col-12 col-md-6">
+              <label for="mail">E-mail:</label>
+              <input type="mail" type="text"/>
+            </div>
+
+            <div class="Form-100">
+              <label for="message">Zpráva:</label>
+              <textarea id="message" rows="10"></textarea>
+          </div>
+
+          <div>
+            <button class="form-small-button">Zvolit soubory</button> 
+            Soubor nevybrán
+          </div>
+
+          <button class="form-button">Odeslat zprávu</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    </div>
+  </div>
+
+  
+  <div id="footer"></div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#header").load("./html/header.html");
+    $("#menu").load("./html/menu.html",null,loadClasses());
+    $("#footer").load("./html/footer.html");
+    
+    function loadClasses() {
+        setTimeout(() => {
+          $(".menu-urad").addClass('main-menu-active');
+        }, 150);
+    }
+    </script>
+</html>
