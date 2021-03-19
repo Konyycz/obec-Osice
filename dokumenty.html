@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumenty</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+  <div id="header"></div>
+  <div id="menu"></div>
+
+
+  <div class="container">
+    <div class="page-body col-12 col-lg-8">
+      <h6 class="sekce-nadpis">Osice > Obecní úřad > Dokumenty</h6>
+      <div class="uredni-deska">
+        <h3 class="informace-nadpis">Dokumenty</h3>
+
+
+        <div class="display-flex-column">
+          <div class="karta uredni-deska-karta karta-zluty-bok">
+            <a class="uredni-deska-nadpis" href="">Rozpočet na opravu silnic</a>
+
+            <div class="display-flex-column col-12" style="margin-top: 30px;">
+              <h6 class="uredni-deska-kestazeni">Ke stažení:</h6>
+              <a class="uredni-deska-text" href="">informace-pdf.pdf</a>
+              <a class="uredni-deska-text" href="">obrazek.jpg</a>
+            </div>
+          </div>
+
+
+          <div class="karta uredni-deska-karta karta-zluty-bok">
+            <a class="uredni-deska-nadpis" href="">Rekonstrukce ZŠ</a>
+            <div class="display-flex-column col-12" style="margin-top: 30px;">
+              <h6 class="uredni-deska-kestazeni">Ke stažení:</h6>
+              <a class="uredni-deska-text" href="">informace-pdf.pdf</a>
+              <a class="uredni-deska-text" href="">obrazek.jpg</a>
+            </div>
+          </div>
+
+          <div class="karta uredni-deska-karta karta-zluty-bok">
+            <a class="uredni-deska-nadpis" href="">Rozpočet na opravu silnic</a>
+
+            <div class="display-flex-column col-12" style="margin-top: 30px;">
+              <h6 class="uredni-deska-kestazeni">Ke stažení:</h6>
+              <a class="uredni-deska-text" href="">informace-pdf.pdf</a>
+              <a class="uredni-deska-text" href="">obrazek.jpg</a>
+            </div>
+          </div>
+
+
+          <div class="karta uredni-deska-karta karta-zluty-bok">
+            <a class="uredni-deska-nadpis" href="">Rekonstrukce ZŠ</a>
+            <div class="display-flex-column col-12" style="margin-top: 30px;">
+              <h6 class="uredni-deska-kestazeni">Ke stažení:</h6>
+              <a class="uredni-deska-text" href="">informace-pdf.pdf</a>
+              <a class="uredni-deska-text" href="">obrazek.jpg</a>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="spodni-navigace display-flex-row">
+          <img class="spodni-navigace-sipka spodni-navigace-sipka-doleva" src="./img/prvky/arrow-right2.svg" alt="arrow-left"/>
+            <p class="spodni-navigace-odkaz">1</p>
+            <p class="spodni-navigace-odkaz"><strong>2</strong></p>
+            <p class="spodni-navigace-odkaz">3</p>
+            <p class="spodni-navigace-odkaz">4</p>
+            <p class="spodni-navigace-odkaz">5</p>
+          <img class="spodni-navigace-sipka" src="./img/prvky/arrow-right2.svg" alt="arrow-right"/>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  
+  <div id="footer"></div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#header").load("./html/header.html");
+    $("#menu").load("./html/menu.html",null,loadClasses());
+    $("#footer").load("./html/footer.html");
+    
+    function loadClasses() {
+        setTimeout(() => {
+          $(".menu-urad").addClass('main-menu-active');
+        }, 150);
+    }
+    </script>
+</html>

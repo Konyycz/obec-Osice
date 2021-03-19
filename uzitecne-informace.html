@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Užitečné informace</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
@@ -77,17 +77,6 @@
           $(".menu-urad").addClass('main-menu-active');
         }, 150);
     }
-    $(window).scroll(function(){
-      const scroll_value = $(window).scrollTop();
-      if (scroll_value > 529) {
-        if (scroll_value > (document.body.scrollHeight - 1150)) return;
-
-        const value = $(window).scrollTop() - 529;
-        $(".main-menu-active").css({"marginTop": value + "px"});
-      } else {
-        $(".main-menu-active").css({"marginTop": "0px"});
-      }
-    });
 
     </script>
 </html>

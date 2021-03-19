@@ -48,7 +48,7 @@
 
 
     <div class="menu-mobile">
-        <p class="menu-img">Menu <img src="./img/menu.png" alt="menu"/></p>
+        <p class="menu-img">Menu <img src="./img/prvky/menu.png" alt="menu"/></p>
         <div class="display-flex-column menu-mobile-body">
             <div class="display-flex-column menu-mobile-body-inner">
                 <p class="menu-mobile-nadpis">Obecní úřad</p>
@@ -79,3 +79,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(window).scroll(function(){
+      const scroll_value = $(window).scrollTop();
+      if (scroll_value > 529) {
+        if (scroll_value > (document.body.scrollHeight - 1150)) return;
+
+        const value = $(window).scrollTop() - 380;
+        $(".main-menu-active").css({"marginTop": value + "px"});
+      } else {
+        $(".main-menu-active").css({"marginTop": "0px"});
+      }
+    });
+</script>
